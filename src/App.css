@@ -1,0 +1,37 @@
+.app-container {
+    
+    border: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.input-text {
+    margin-top: 15px;
+    height: 27px;
+    width: 50%; 
+    font-size: 16px;
+}
+
+.todo-btn {
+    height: 32px;
+    width: 8%;
+}
+
+.heading {
+    color: blue;
+    font-weight: 700;
+    align-items: center;
+}
+
+button {
+    margin: 10px;
+    margin-left: 12px;
+}
+
+.footer {
+    padding: 22px;
+}
