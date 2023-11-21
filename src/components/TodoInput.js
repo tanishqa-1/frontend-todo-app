@@ -13,7 +13,7 @@ const TodoInput = ({ addTodo, editing, setEditing, currentTodo, updateTodo }) =>
       setMode('edit');
       setTodo(currentTodo);
     }
-  }, [editing, currentTodo]);
+  }, [editing]);
 
   const inputChange = (e) => {
     const { name, value } = e.target;
@@ -31,6 +31,12 @@ const TodoInput = ({ addTodo, editing, setEditing, currentTodo, updateTodo }) =>
     }
     setTodo(initialState);
   };
+
+  const handleCancel = () => {
+    setEditing(false);
+    setTodo(initialState);
+  }
+  
   return (
     <div className='header'>
       <form className='input-wrapper' onSubmit={handleSubmit}>
@@ -47,7 +53,7 @@ const TodoInput = ({ addTodo, editing, setEditing, currentTodo, updateTodo }) =>
          ) : (
           <>
             <button className="todo-btn">Update</button>
-            <button className="todo-btn" onClick={() => setEditing(false)}>Cancel</button>
+            <button className="todo-btn" onClick={handleCancel}>Cancel</button>
           </>
          )}
       </form>
